@@ -1,0 +1,28 @@
+{
+  "name": "supertest-document",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov",
+    "lint": "eslint lib/**/*.js test/**/*.js index.js",
+    "lint:fix": "eslint --fix lib/**/*.js test/**/*.js index.js",
+    "test": "nyc --reporter=html --reporter=text mocha --exit --verbose --require should --reporter spec --check-leaks --trace-warnings",
+    "format": "prettier -w ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "dependencies": {
+    "@types/supertest": "^2.0.12",
+    "supertest": "^6.3.1"
+  },
+  "devDependencies": {
+    "express": "^4.18.2",
+    "mocha": "^10.1.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.7.1",
+    "should": "^13.2.3"
+  }
+}
